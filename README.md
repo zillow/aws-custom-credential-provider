@@ -21,3 +21,8 @@ spark.sparkContext.hadoopConfiguration.set("amz-assume-role-arn", jobArgs.params
 When Hadoop/Spark applications access HDFS using `S3://` URI prefix, EMRFS will be initialized to handle the IO calls. At initialization, EMRFS looks for credential providers available including: (1) custom credential providers in current `CLASSPATH` (2) other default credential providers (local AWS profiles and EC2 profiles). After getting credential providers, EMRFS tries the credential providers according to their priority (custom providers have the highest priority). The first credential provider that returns a non-null `AWSCredentials` object wins and the credential provider will be cached for the entire application. HDFS will also periodically calls the cached credential provider to validate and renew the credentials.
 
 Our custom credential provider gets the role name through `Hadoop` configuration mechanism, and calls `AWS Security Token Service (STS)` to return a valid `AWSCredentials` during initialization, and renews it during the entire application session.
+
+# Build status
+Last successful build on Ubuntu 14.04 machine - 2017-08-30.
+It's a tiny project. Try build on your local box and fix the build if needed.
+
