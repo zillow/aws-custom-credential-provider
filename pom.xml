@@ -8,29 +8,37 @@
 
     <name>aws-custom-credential-provider</name>
     <version>1.0</version>
+    <properties>
+	<aws.sdk.version>1.10.1</aws.sdk.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-core</artifactId>
+	    <version>${aws.sdk.version}</version>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk</artifactId>
+            <version>${aws.sdk.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
+            <artifactId>httpclient</artifactId>            
+	    <version>4.5</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
+            <version>4.12</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <scope>test</scope>
+            <version>1.9.5</version>
         </dependency>
         <!--
             The credential provider keep its dependencies compatible with 
