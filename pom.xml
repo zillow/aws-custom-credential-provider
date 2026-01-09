@@ -9,7 +9,7 @@
     <name>aws-custom-credential-provider</name>
     <version>1.0</version>
     <properties>
-	<aws.sdk.version>1.10.1</aws.sdk.version>
+	<aws.sdk.version>1.12.796</aws.sdk.version>
     </properties>
 
     <dependencies>
